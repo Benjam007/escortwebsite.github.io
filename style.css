@@ -1,0 +1,727 @@
+/* General Styles */
+
+/* Use box-sizing:border-box to include padding and border in the element's total width and height */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Reset default styles for some elements */
+html, body, h1, p, fieldset, legend, label, input, textarea, select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  color: inherit;
+  background: none;
+}
+
+/* Set a minimum font size to ensure legibility */
+html, body {
+  font-size: 16px;
+  min-width: 320px;
+}
+
+/* Use the Montserrat font for headings and the Hindi font for paragraphs */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+p {
+  font-family: 'Hindi', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-text {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  text-align: justify;
+  margin-top: 2%;
+}
+
+
+/* Default styles for the header and navigation */
+
+header {
+  background-image: url('header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 2rem;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header-text h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.learn-more-btn {
+  background-color: #fff;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.learn-more-btn:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+
+  .hamburger span {
+    display: block;
+    background-color: #333;
+    height: 3px;
+    width: 25px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav.active .hamburger span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  nav.active .hamburger span:nth-child(2) {
+    opacity:1;
+transform: rotate(-45deg);
+top: 0.8rem;
+}
+
+/* header text */
+.header-text {
+text-align: center;
+margin-top: 10rem;
+}
+
+.header-text h1 {
+font-size: 4rem;
+margin: 0;
+color: #fff;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-text button {
+padding: 1.5rem 2.5rem;
+background-color: #fff;
+border: none;
+border-radius: 3rem;
+color: #333;
+font-weight: bold;
+text-transform: uppercase;
+margin-top: 2rem;
+cursor: pointer;
+}
+
+.header-text button:hover {
+  background-color: #333;
+color: #fff;
+transition: 0.3s ease;
+}
+
+/* media queries */
+@media screen and (max-width: 767px) {
+nav {
+position: relative;
+}
+
+nav .menu {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav .menu li {
+  display: block;
+  margin: 1rem;
+}
+
+nav .hamburger {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+nav.active .menu {
+  display: block;
+}
+
+nav.active .hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0.8rem;
+}
+
+nav.active .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+nav.active .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 0.8rem;
+}
+
+.header-text {
+  margin-top: 7rem;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+}
+
+.header-text button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+nav .menu li {
+display: inline-block;
+margin: 0 1rem;
+}
+
+.header-text {
+  margin-top: 15rem;
+}
+
+.header-text h1 {
+  font-size: 3.5rem;
+}
+
+.header-text button {
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+.header-text {
+margin-top: 18rem;
+}
+
+.header-text h1 {
+  font-size: 4.5rem;
+}
+
+.header-text button {
+  padding: 1.5rem 4rem;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+}
+}
+
+
+/* Use rem units for font sizes to ensure scalability */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Use a max-width and center the content to improve readability on larger screens */
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Mobile Styles */
+
+/* Use a linear gradient for the body background to add some depth */
+body {
+  background: linear-gradient(180deg, #FFFFFF 50%, #F9F9F9 50%);
+}
+
+/* Center the header */
+h1 {
+  text-align: center;
+}
+
+/* Reduce the font size of the form labels and increase the font size of the form inputs */
+fieldset label {
+  font-size: 0.8rem;
+}
+
+fieldset input, fieldset select, fieldset textarea {
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+/* Increase the spacing between form elements */
+fieldset {
+  margin-bottom: 2rem;
+}
+
+fieldset legend {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+/* Add some spacing to the top and bottom of the form */
+form {
+  margin: 2rem 0;
+}
+
+/* Tablets and Low-Resolution iPads Styles */
+
+/* Reduce the font size of the form labels and inputs further to accommodate smaller screens */
+fieldset label {
+  font-size: 0.7rem;
+}
+
+fieldset input, fieldset select, fieldset textarea {
+  font-size: 1rem;
+}
+
+/* Reduce the margin-bottom of the fieldset elements to make better use of space */
+fieldset {
+  margin-bottom: 1rem;
+}
+
+/* iPads in Portrait Mode Styles */
+
+/* Add some padding to the form to improve readability */
+form {
+  padding: 1rem;
+}
+
+/* Increase the font size of the form labels and inputs to improve readability */
+fieldset label {
+  font-size: 1rem;
+}
+
+fieldset input, fieldset select, fieldset textarea {
+  font-size: 1.4em;
+padding: 0.5em;
+border-radius: 5px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+/* Style for buttons */
+button {
+background-color: #4CAF50;
+color: white;
+padding: 0.5em 1em;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+button:hover {
+background-color: #3e8e41;
+}
+
+/* Style for links */
+a {
+color: #4CAF50;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+/* Responsive layout for smaller screens */
+@media only screen and (max-width: 768px) {
+/* Reduce font size for smaller screens */
+body {
+font-size: 14px;
+}
+
+/* Adjust column layout for smaller screens */
+.column {
+width: 100%;
+}
+
+/* Hide navigation menu by default */
+.topnav {
+display: none;
+}
+
+/* Show navigation menu when hamburger icon is clicked */
+.topnav.responsive {
+display: block;
+}
+
+.topnav.responsive a {
+float: none;
+display: block;
+text-align: left;
+}
+}
+
+/* Style for forms */
+form {
+margin: 1em;
+padding: 1em;
+background-color: #f2f2f2;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+form label {
+font-weight: normal;
+}
+
+form legend {
+font-weight: bold;
+font-size: 1.4em;
+}
+
+/* Style for error messages */
+.error {
+color: red;
+font-style: italic;
+margin-bottom: 0.5em;
+}
+
+/* Style for success messages */
+.success {
+color: green;
+font-style: italic;
+margin-bottom: 0.5em;
+}
+
+/* Style for information messages */
+.info {
+color: blue;
+font-style: italic;
+margin-bottom: 0.5em;
+}
+
+/* Style for warning messages */
+.warning {
+color: orange;
+font-style: italic;
+margin-bottom: 0.5em;
+}
+
+/* Style for section headers */
+.section-header {
+font-size: 1.6em;
+font-weight: bold;
+margin-top: 2em;
+margin-bottom: 1em;
+}
+
+/* Style for section subheaders */
+.section-subheader {
+font-size: 1.4em;
+font-weight: bold;
+margin-top: 1.5em;
+margin-bottom: 0.5em;
+}
+
+/* Style for section text */
+.section-text {
+font-size: 1.2em;
+line-height: 1.5;
+margin-bottom: 1em;
+}
+
+/* Style for section images */
+.section-image {
+display: block;
+margin: 2em auto;
+max-width: 100%;
+}
+
+/* Style for tables */
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+text-align: left;
+padding: 0.5em;
+border: 1px solid #ccc;
+}
+
+th {
+background-color: #f2f2f2;
+font-weight: bold;
+}
+
+/* Style for pagination */
+.pagination {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2em;
+}
+
+.pagination a {
+color: black;
+float: left;
+padding: 8px 16px;
+text-decoration: none;
+transition: background-color 0.3s;
+border: 1px solid #ddd;
+}
+
+.pagination a.active {
+background-color: #4CAF50;
+color: white;
+border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+background-color: #ddd;
+}
+
+/* Forms */
+
+form {
+margin: 0 auto;
+max-width: 500px;
+}
+
+form label {
+display: block;
+font-weight: normal;
+margin-bottom: 5px;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"], form select, form textarea {
+border: 1px solid #ccc;
+padding: 8px;
+font-size: 16px;
+width: 100%;
+box-sizing: border-box;
+margin-bottom: 10px;
+}
+
+form input[type="submit"], form button {
+background-color: #4CAF50;
+border: none;
+color: white;
+cursor: pointer;
+padding: 10px 20px;
+font-size: 16px;
+border-radius: 5px;
+}
+
+form input[type="submit"]:hover, form button:hover {
+background-color: #3e8e41;
+}
+
+/* Media queries */
+
+@media (max-width: 767px) {
+nav ul {
+display: none;
+}
+
+nav button {
+display: block;
+}
+}
+
+@media (min-width: 768px) {
+nav button {
+display: none;
+}
+
+nav ul {
+display: flex;
+}
+}
+
+/* Utility classes */
+
+.text-center {
+text-align: center;
+}
+
+.mt-20 {
+margin-top: 20px;
+}
+
+.mb-20 {
+margin-bottom: 20px;
+}
+
+.p-10 {
+padding: 10px;
+}
+
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
+footer {
+    margin-top: 5%;
+    background: #353535;
+    padding: 12px 0;
+    text-align: center;
+    color: #868686;
+    text-align: center;
+}
+
+.foot-container {
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  max-width: 900px;
+}
+
+.foot-container a {
+  color: white;
+  text-decoration: none;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.foot-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+}
+
+footer li a:hover {
+    color: white;
+}
+ 
+footer {
+        padding: 12px 0 10px 0;
+}
+
+footer li {
+        display: block;
+        margin: 5px 0;
+}
+
+#payment-info {
+  text-align: center;
+}

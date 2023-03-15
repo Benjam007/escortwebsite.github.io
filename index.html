@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TribalGateway - Airport Escort</title>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="logo.png" alt="Logo"></a>
+    </div>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="header-text">
+    <h1>Tribalgateway Escort Service</h1>
+    <a href="#" class="learn-more-btn">Learn More</a>
+  </div>
+</header>
+
+
+ <p class="welcome-text">
+        Thank you for the opportunity to allow us to make your visit to Nigeria as
+        stress-free as possible. Our Airport Escort will greet you once you arrive
+        and guide you through the Immigration Lines as quickly as possible. You
+        can have one loved one meet you right outside of the Security Door. To
+        customize your experience, please select your preferences below.
+    </p>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required /><br />
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required /><br />
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required /><br />
+            <label for="arrival-date">Date of Arrival:</label>
+            <input type="date" id="arrival-date" name="arrival-date" required /><br />
+            <label for="arrival-time">Time of Arrival:</label>
+            <input type="time" id="arrival-time" name="arrival-time" required /><br />
+            <label for="airline">Airline:</label>
+            <input type="text" id="airline" name="airline" required /><br />
+            <label for="departure-date">Date of Departure:</label>
+            <input type="date" id="departure-date" name="departure-date" required /><br />
+            <label for="persons-arriving">How many persons will be arriving?</label>
+            <input type="number" id="persons-arriving" name="persons-arriving" required /><br />
+        </fieldset>
+
+        <fieldset id="escortFieldset">
+            <legend>Escort Service</legend>
+            <p>I NEED ESCORT SERVICE FOR:</p>
+            <label>
+                <input type="checkbox" name="escort-service" value="150" class="escort-service" /> Arrival Only $150
+            </label><br />
+            <label>
+                <input type="checkbox" name="escort-service" value="150" class="escort-service" /> Departure Only $150
+            </label><br />
+            <label>
+                <input type="checkbox" name="escort-service" value="275" class="escort-service" /> Both Arrival and Departure $275
+            </label><br />
+            <p>Will someone be in Nigeria to greet you at the airport?</p>
+            <label for="greet-name">Name:</label>
+            <input type="text" id="greet-name" name="greet-name" /><br />
+            <label for="greet-phone">Phone#:</label>
+            <input type="tel" id="greet-phone" name="greet-phone" /><br />
+            <label for="emergency-contact">Emergency Contact in Home Country:</label>
+            <input type="text" id="emergency-contact" name="emergency-contact" /><br />
+        </fieldset>
+
+        <fieldset id="transportFieldset">
+            <legend>TRANSPORTATION</legend>
+            <p>Please indicate if you will need transportation on the day of your Arrival and Departure.</p>
+            <input type="checkbox" name="transportation" value="50" id="transportation-1" class="transport-service">
+            <label for="transportation-1">I will need transportation from the airport to my housing accommodations on
+                the day of my Arrival. - $50</label>
+            <br>
+            <input type="checkbox" name="transportation" value="50" id="transportation-2" class="transport-service">
+            <label for="transportation-2">I will need transportation from my housing accommodation to the airport on the
+                day of my Departure - $50</label>
+            <br>
+            <input type="checkbox" name="transportation" value="100" id="transportation-3" class="transport-service">
+            <label for="transportation-3">For my arrival, I will need transportation for my Relative to be picked up and
+                brought to the airport to greet me, and then take us both to our accommodation from the airport -
+                $100</label>
+            <br>
+            <input type="checkbox" name="transportation" value="100" id="transportation-4" class="transport-service">
+            <label for="transportation-4">I will also need this for my Departure. The driver will pick us up from our
+                accommodation and take us to the airport. The driver will wait at the airport while my Relative sees me
+                off. Then the driver will take my Relative back to the accommodations - $100</label>
+        </fieldset>
+
+        <fieldset id="securityFieldset">
+            <legend>SECURITY</legend>
+            <p>Would you like to have a security officer to escort you for the day?</p>
+            <input type="radio" name="security" value="0" id="security-1" checked>
+            <label for="security-1">No</label>
+            <br>
+            <input type="radio" name="security" value="50" id="security-2">
+            <label for="security-2">Private Officer - $50 daily</label>
+            <br>
+            <input type="radio" name="security" value="70" id="security-3">
+            <label for="security-3">Police Officer - $70 daily</label>
+            <br>
+            <input type="checkbox" name="security" value="50" id="security-4">
+            <label for="security-4">Visibly Armed - $50 daily surcharge, in addition to above Officer Charge</label>
+        </fieldset>
+
+<fieldset id="tshirt">
+        <div class="t-shirts">
+<label for="tshirt"><h5>T-SHIRTS</h5></label><br>
+<label for="queen-tshirt">
+Queen Tshirt $25<br>
+<input type="checkbox" id="queen-tshirt" name="queen-tshirt" value="25">
+<select id="queen-tshirt-size" name="queen-tshirt-size">
+<option value="">Select size</option>
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+<option value="1X">1X</option>
+<option value="2X">2X</option>
+</select>
+</label><br>
+<label for="king-tshirt">
+Matching King Tshirt $25<br>
+<input type="checkbox" id="matching-king-tshirt" name="matching-king-tshirt" value="25">
+<select id="matching-king-tshirt-size" name="matching-king-tshirt-size">
+<option value="">Select size</option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+<option value="1X">1X</option>
+<option value="2X">2X</option>
+</select>
+</label><br>
+<label for="tshirt-title">Choose Title</label><br>
+<select id="tshirt-title" name="tshirt-title">
+  <option value="">Select title</option>
+<option value="The Queen has Arrived">The Queen has Arrived</option>
+<option value="The King has Arrived">The King has Arrived</option>
+<option value="Breaking The Spell">Breaking The Spell</option>
+<option value="It’s In My DNA">It’s In My DNA</option>
+</select>
+</div>
+</fieldset>
+            <br><br>
+
+            <!-- CART -->
+            <fieldset>
+                <legend>CART</legend>
+                Escort Services $<span id="escort-total">0</span><br>
+                Transportation $<span id="transportation-total">0</span><br>
+                Security $<span id="security-total">0</span><br>
+                T-Shirts $<span id="tshirt-total">0</span><br>
+                Vat/Taxes $<span id="vat-total">10</span><br>
+                <hr>
+                SUBTOTAL $<span id="subtotal">0</span><br><br>
+                <button type="button" id="submit" >GET SUB TOTAL</button><br><br>
+                DISCOUNT CODE: <input type="text"  name="discount_code" id="discount_code"><br>
+                Discount Amount $<span id="discount_amount">0</span><br>
+                <br>
+                YOUR TOTAL IS: $<span id="total">0</span><br>
+                <br>
+                <button type="button" id="apply_discount_btn">APPLY DISCOUNT CODE</button>
+                <br>
+                <br>
+                </fieldset>
+
+                 </form>
+                
+                <div id="payment-info">
+                    <h5>Payments can be sent via</h5>
+                    World Remit/Remitly/Sendwave/Western Union
+                    <br>
+                    <br>
+                    CHOOSE BANK DEPOSIT
+                    <br>
+                    Roberta Toniatte Bryant
+                    <br>
+                    Lekki, Lagos, Nigeria
+                    <br>
+                    tribalgatewayllc@gmail.com
+                    <br>
+                    +234-913-903-0389
+                    <br>
+                    Access Bank
+                    <br>
+                    Acct#: 1662807523
+                </div>
+              
+    <footer>
+  <div class="foot-container">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+
+<p align="center">&copy; Copyright Tribalgateway <script>document.write(new Date().getFullYear());</script> | All Rights Reserved</p>
+  </div>
+</footer> 
+  
+    <script src="main.js"></script>
+</body>
+
+</html>
