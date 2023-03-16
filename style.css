@@ -728,3 +728,17 @@ footer li {
 #payment-info {
   text-align: center;
 }
+
+
+
+@media screen and (max-width: 480px) {
+    .header-text {
+        display: inline-block;
+    }
+    .learn-more-btn {
+      display: block;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+}  
